@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{%block title %}Project Description{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="header">
+			<h1>Data Collection and Preparation</h1>
+			<hr/>
+		</div>
+		<div>
+			<p></p>
+			<ol>
+			  <li>Current Population Survey – <a href="http://www.bls.gov/cps/cpsaat39.htm">CPS</a></li>
+			  	<ul>
+		      		<li>Median weekly earnings by gender and occupation</li>
+		      		<li>From the Bureau of Labor Statistics (BLS)</li>
+		      	</ul>
+			  <li>Integrated Postsecondary Education Data System – <a href="https://nces.ed.gov/ipeds/datacenter/Default.aspx">IPEDS</a></li>
+			  	<ul>
+		      		<li>Demographic breakdown of the number of students who graduate from each university with Bachelor’s degrees in each type of program</li>
+		      		<li>From the National Center for Education Statistics (NCES)</li>
+		      	</ul>
+			</ol>
+			<p>The CPS data was retrieved using a web-scraping program that pulled data from the BLS’ table on earnings and employment by gender and occupation. Each row of the table is read, but the data was only maintained for the rows with information, as the BLS includes a blank row to separate occupations based on type. Additionally, occupations that were too small for the BLS to disclose earnings for both men and women were removed from the analysis.</p>
+			<p>The program then calculates the percentage of women in each occupation as well as the wage gap between male and female earnings. The data was then separated into two datasets; one that contains the aggregated occupational groups, and one for the individual occupations. The occupational groups will be used in junction with graduation data by aggregated degree families, which comprise of similar majors. Whereas the data on individual occupations is the primary focus of this project, as this ensures apples-to-apples comparisons by occupation to look for differences in earnings by gender.</p>
+			<p>The IPEDS data was downloaded into a .csv file and then grouped together by degree families. Degree families include aggregating specific majors such as chemical engineering with mechanical engineering to form a group called Engineering. The total number of male and female degree recipients was calculated, along with the percentage of female graduates.</p>
+			<p>Finally specific degree families were combined to form groups that are more comparable to specific occupational groups provided by the BLS. The aggregated IPEDS and BLS data were then joined to form a dataset containing both graduation rates and median earnings for closely related occupations and degrees.</p>
+		</div>
+	</div>
+
+
+{% endblock %}
