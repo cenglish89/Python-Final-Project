@@ -1,3 +1,3 @@
-#Website Project Example
+#Do Women Earn 81 Cents for Every Dollar Men Earn?
 
-This website is part of my final project for a Johns Hopkins course in Python to analyze data and build a website to showcase the skills I learned.
+It is often reported that women earn 81 cents for every dollar that men earn; a troubling wage gap as more and more women join the labor force and are the primary bread winners for themselves and their families. This project therefore looks for different occupational specializations by gender, starting from major selections at college, to determine not only if all women face the same wage gap but also to see if different occuptions may help explain the wage gap at the national level.
